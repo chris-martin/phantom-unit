@@ -1,4 +1,5 @@
 resolver: lts-8.4
 
 packages:
-  - phantom-unit
+  - phantom-unit-math
+  - phantom-unit-time

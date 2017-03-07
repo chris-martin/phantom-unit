@@ -1,4 +1,4 @@
-name: phantom-unit
+name: phantom-unit-time
 version: 0.1.0.0
 homepage: https://github.com/chris-martin/phantom-unit
 license: BSD3
@@ -13,10 +13,18 @@ default-extensions:
 
 dependencies:
   - base
+  - phantom-unit-math
 
 library:
   source-dirs: src
-  exposed-modules: Lib
+  exposed-modules:
+    - PhantomUnit.Time
+    - PhantomUnit.Time.Duration
+    - PhantomUnit.Time.FromDuration
+    - PhantomUnit.Time.TimeUnit
+    - PhantomUnit.Time.ToDuration
+    - PhantomUnit.Time.Units
+    - PhantomUnit.Time.UseCases
 
 tests:
   test:
@@ -24,4 +32,4 @@ tests:
     main: Spec.hs
     dependencies:
       - base
-      - phantom-unit
+      - phantom-unit-time
